@@ -1,0 +1,10 @@
+body { /* Estilos para el cuerpo de la pagina */
+    background-color: #f4f4f4;  /* Color de fondo claro */
+    margin: 1px; /* Margen alrededor del cuerpo */
+    font-family: Arial, sans-serif; /* Fuente legible */
+}
+
+/* 
+.selector = clases
+#selector = id
+* = todos los elementos */
