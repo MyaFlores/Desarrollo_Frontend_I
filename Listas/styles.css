@@ -1,0 +1,101 @@
+/* 1. Fuente del documento en general */
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* 2. Margin y padding */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 3. Estilizar las etiquetas ol y ul */
+ol, ul {
+    margin: 15px 0;
+    padding-left: 30px;
+}
+
+ol li, ul li {
+    margin-bottom: 12px;
+    padding-left: 10px;
+    font-size: 16px;
+    color: #000000;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+/* 4. Estiliza la lista anidada para que se note la jerarquía */
+ul ul, ol ul, ul ol, ol ol {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+}
+
+ul ul li, ol ul li, ul ol li, ol ol li {
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+/* Estilo específico para la lista anidada dentro de la ordenada */
+li > ul {
+    background-color: #f0f7ff;
+    border-left: 3px solid #0077ff;
+    padding: 12px 0 12px 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Estilo para el título dentro de la lista anidada */
+li > ul h4 {
+    margin-top: 0;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* 5. Contenedor principal (.card) */
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 20px 0;
+    border: 1px solid #e1e8ed;
+}
+
+/* Estilos para encabezados */
+h1 {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #0077ff;
+}
+
+h3 {
+    color: #3498db;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 4px solid #3498db;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
