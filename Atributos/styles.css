@@ -1,0 +1,184 @@
+/* ===== ESTILOS GENERALES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-color: #c8deff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #b6d1fa;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #000000;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #4a90e2;
+}
+
+/* ===== ESTILOS PARA EL FORMULARIO ===== */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.input-text {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.input-text:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.input-text::placeholder {
+    color: #aaa;
+}
+
+/* ===== ESTILOS PARA LA IMAGEN ===== */
+.image-container {
+    text-align: center;
+    margin: 25px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.responsive-img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    border: 3px solid #e1e8ed;
+}
+
+.img-caption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+    font-size: 14px;
+}
+
+/* ===== ESTILOS PARA EL ENLACE ===== */
+.link-container {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.external-link {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #4a90e2;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.external-link:hover {
+    background-color: #357ae8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.link-icon {
+    margin-right: 8px;
+}
+
+/* ===== ESTILOS PARA EL BOTÓN ===== */
+.button-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.btn-primary {
+    padding: 14px 30px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.result-message {
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+    body {
+        margin: 15px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    .input-text, .btn-primary, .external-link {
+        width: 100%;
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos en HTML</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- NOTA: script.js se enlaza al final del body, no aquí -->
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicio de atributos en HTML</h1>
+        
+        <!-- Cuadro de texto -->
+        <div class="form-group">
+            <label for="nombre">Escribe tu nombre:</label>
+            <input type="text" 
+                   id="nombre" 
+                   placeholder="Escribe tu nombre aquí"
+                   class="input-text">
+        </div>
+        
+        <!-- Imagen -->
+        <div class="image-container">
+            <img src="descarga.jpeg" 
+                 alt="Ilustración de bienvenida con personaje amigable"
+                 width="250"
+                 class="responsive-img">
+            <p class="img-caption">¡Te damos la bienvenida!</p>
+        </div>
+        
+        <!-- Enlace -->
+        <div class="link-container">
+            <a href="https://www.numuki.com/" 
+               target="_blank" 
+               class="external-link">
+                <span class="link-icon">🎵</span> Visita mi sitio favorito para juegos
+            </a>
+        </div>
+        
+        <!-- Botón -->
+        <div class="button-container">
+            <button id="btnSaludar" class="btn-primary">
+                <span class="btn-icon">👋</span> Saludar
+            </button>
+        </div>
+        
+        <!-- Mensaje de resultado (opcional, para mejor UX) -->
+        <div id="mensajeResultado" class="result-message"></div>
+    </div>
+    
+    <!-- JavaScript se enlaza al final del body -->
+    <script src="script.js"></script>
+</body>
+</html>
