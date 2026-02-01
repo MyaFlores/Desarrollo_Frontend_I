@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM vs BOM - Actividad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabecera -->
+        <header>
+            <h1>📚 DOM vs BOM</h1>
+            <p class="subtitle">Actividad de JavaScript - Comparación y ejemplos prácticos</p>
+        </header>
+
+        <!-- Botón y lista de ciudades -->
+        <section class="card">
+            <h2>🏙️ Ciudades Ejemplo</h2>
+            <p>Arreglo de 5 ciudades usando JavaScript:</p>
+            <button id="showBtn" class="btn">Mostrar Lista</button>
+            
+            <div class="cities-box">
+                <p id="message">Presiona el botón para ver las ciudades...</p>
+                <ul id="citiesList"></ul>
+            </div>
+        </section>
+
+        <!-- Cuadro comparativo -->
+        <section class="card">
+            <h2>📊 Comparación DOM vs BOM</h2>
+            
+            <div class="comparison">
+                <div class="dom-section">
+                    <h3 class="dom-title">DOM</h3>
+                    <div class="content">
+                        <p><strong>Definición:</strong> Modelo de objetos del documento. Representa la estructura HTML/XML.</p>
+                        <p><strong>Controla:</strong> Elementos, contenido y estilo de la página.</p>
+                        <p><strong>Objeto principal:</strong> <code>document</code></p>
+                        
+                        <div class="example">
+                            <strong>Ejemplo 1:</strong>
+                            <pre>document.getElementById("miId")</pre>
+                        </div>
+                        
+                        <div class="example">
+                            <strong>Ejemplo 2:</strong>
+                            <pre>elemento.textContent = "Hola"</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bom-section">
+                    <h3 class="bom-title">BOM</h3>
+                    <div class="content">
+                        <p><strong>Definición:</strong> Modelo de objetos del navegador. Interactúa con la ventana.</p>
+                        <p><strong>Controla:</strong> Ventana, historial, ubicación, pantalla.</p>
+                        <p><strong>Objeto principal:</strong> <code>window</code></p>
+                        
+                        <div class="example">
+                            <strong>Ejemplo 1:</strong>
+                            <pre>window.location.href</pre>
+                        </div>
+                        
+                        <div class="example">
+                            <strong>Ejemplo 2:</strong>
+                            <pre>window.alert("Mensaje")</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="differences">
+                <h3>🔑 Diferencias Clave</h3>
+                <div class="diff-grid">
+                    <div class="diff-item">
+                        <h4>DOM</h4>
+                        <ul>
+                            <li>Estándar oficial</li>
+                            <li>Para documentos</li>
+                            <li>Manipula contenido</li>
+                        </ul>
+                    </div>
+                    <div class="diff-item">
+                        <h4>BOM</h4>
+                        <ul>
+                            <li>No es estándar</li>
+                            <li>Para navegador</li>
+                            <li>Controla ventana</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Información extra -->
+        <section class="card info">
+            <h2>💡 ¿Sabías que?</h2>
+            <p>El DOM está contenido dentro del BOM. El objeto <code>document</code> es una propiedad de <code>window</code>.</p>
+            <p class="console-note">Abre la consola (F12) para ver las ciudades mostradas con console.log()</p>
+        </section>
+
+        <footer>
+            <p>Actividad JavaScript | DOM vs BOM</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
