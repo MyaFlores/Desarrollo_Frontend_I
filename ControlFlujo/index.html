@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluador de Números</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <!-- Cabecera -->
+        <header class="header">
+            <h1><i class="fas fa-calculator"></i> Evaluador de Números</h1>
+            <p>Actividad: Estructuras de control, DOM y arreglos en JavaScript</p>
+        </header>
+
+        <!-- Panel principal -->
+        <div class="main-panel">
+            <div class="input-card">
+                <h2>Ingresa un número</h2>
+                
+                <div class="input-group">
+                    <input type="text" id="numeroInput" placeholder="Ej: 25" class="input-field">
+                </div>
+
+                <div class="button-group">
+                    <button id="evaluarBtn" class="btn btn-primary">
+                        <i class="fas fa-check"></i> Evaluar
+                    </button>
+                    <button id="limpiarBtn" class="btn btn-secondary">
+                        <i class="fas fa-eraser"></i> Limpiar
+                    </button>
+                </div>
+
+                <!-- Área de resultado actual -->
+                <div id="resultadoContainer" class="result-container">
+                    <h3>Resultado:</h3>
+                    <div id="resultado" class="result-box">
+                        Esperando número...
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel de estadísticas -->
+            <div class="stats-card">
+                <h2>Estadísticas</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-label">Números evaluados:</span>
+                        <span id="contador" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Número mayor:</span>
+                        <span id="numeroMayor" class="stat-value">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Historial -->
+        <div class="history-card">
+            <h2><i class="fas fa-history"></i> Historial de evaluaciones</h2>
+            <div class="history-header">
+                <span>Total: <span id="historialCount">0</span> números</span>
+            </div>
+            <ul id="historialList" class="history-list">
+                <li class="empty-history">No hay números evaluados aún</li>
+            </ul>
+        </div>
+
+        <!-- Información de la actividad -->
+        <div class="info-card">
+            <h2><i class="fas fa-code"></i> Información técnica</h2>
+            <div class="info-content">
+                
+                <div class="info-item">
+                    <h3>Clasificación de números:</h3>
+                    <ul class="leyenda">
+                        <li><span class="color-box rojo"></span> Negativo (&lt; 0)</li>
+                        <li><span class="color-box azul"></span> Pequeño (0 - 10)</li>
+                        <li><span class="color-box naranja"></span> Mediano (11 - 50)</li>
+                        <li><span class="color-box verde"></span> Grande (51 - 1000)</li>
+                        <li><span class="color-box gris"></span> Demasiado alto (&gt; 1000)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Evaluador de Números - Actividad JavaScript | Revisa la consola para ver el proceso</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
