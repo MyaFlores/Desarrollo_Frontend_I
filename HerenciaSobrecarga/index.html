@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herencia en JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado -->
+        <header class="header">
+            <h1></i> Herencia en JavaScript</h1>
+            <p class="subtitle">Clases, extends, override y super()</p>
+        </header>
+
+        <!-- ============================================ 
+             SECCIÓN 1: INVESTIGACIÓN TEÓRICA
+             ============================================ -->
+        <section class="section theory-section">
+            <h2><i class="fas fa-book-open"></i> Investigación Teórica</h2>
+            
+            <div class="theory-content">
+                <!-- Concepto 1: Clases en JavaScript -->
+                <div class="theory-card">
+                    <h3><i class="fas fa-cube"></i> ¿Qué es una clase en JavaScript?</h3>
+                    <p>
+                        Una clase en JavaScript es una plantilla o modelo para crear objetos. Funciona como un "molde" 
+                        que define propiedades (atributos) y métodos (funciones) que tendrán los objetos creados a partir 
+                        de ella. Introducidas en ES6 (ECMAScript 2015), las clases simplifican la programación orientada 
+                        a objetos en JavaScript, aunque por debajo siguen usando prototipos. Por ejemplo, en esta actividad 
+                        creamos la clase <code>Producto</code> que define propiedades como <code>nombre</code>, 
+                        <code>precio</code> y <code>stock</code>, y métodos como <code>mostrarDetalle()</code>.
+                    </p>
+                </div>
+
+                <!-- Concepto 2: Herencia (extends) -->
+                <div class="theory-card">
+                    <h3><i class="fas fa-sitemap"></i> ¿Qué es la herencia (extends)?</h3>
+                    <p>
+                        La herencia es un principio de la programación orientada a objetos que permite crear una nueva 
+                        clase basada en una clase existente. En JavaScript, usamos la palabra clave <code>extends</code> 
+                        para establecer esta relación. La clase hija hereda todos los métodos y propiedades de la clase 
+                        padre, pudiendo agregar nuevos o modificar los existentes. En nuestro ejemplo, 
+                        <code>ProductoElectronico</code> hereda de <code>Producto</code>, lo que significa que 
+                        automáticamente tiene acceso a <code>nombre</code>, <code>precio</code>, <code>stock</code> 
+                        y al método <code>mostrarDetalle()</code> de la clase padre.
+                    </p>
+                </div>
+
+                <!-- Concepto 3: Sobrescritura de métodos (override) -->
+                <div class="theory-card">
+                    <h3><i class="fas fa-pen"></i> ¿Qué es la sobrescritura de métodos (override)?</h3>
+                    <p>
+                        La sobrescritura de métodos (override) ocurre cuando una clase hija redefine un método heredado 
+                        de la clase padre para darle un comportamiento específico. Esto permite mantener la misma interfaz 
+                        (nombre del método) pero con una implementación diferente. En nuestra actividad, sobrescribimos 
+                        el método <code>mostrarDetalle()</code> en <code>ProductoElectronico</code> para que además de 
+                        mostrar los datos básicos del producto, también muestre la garantía y la marca, información 
+                        específica de los productos electrónicos.
+                    </p>
+                </div>
+
+                <!-- Concepto 4: super() -->
+                <div class="theory-card">
+                    <h3><i class="fas fa-arrow-up"></i> ¿Para qué sirve super() en un constructor?</h3>
+                    <p>
+                        La función <code>super()</code> se utiliza en el constructor de una clase hija para llamar al 
+                        constructor de la clase padre. Es obligatorio usarla antes de poder usar <code>this</code> en el 
+                        constructor de la clase hija. Además, <code>super</code> también permite acceder a métodos del 
+                        padre, como en <code>super.mostrarDetalle()</code>, que usamos para obtener los detalles base y 
+                        luego agregar la información específica de garantía. Sin <code>super()</code>, no podríamos 
+                        inicializar correctamente las propiedades heredadas.
+                    </p>
+                </div>
+
+                <!-- Fuentes consultadas -->
+                <div class="theory-card sources">
+                    <h3><i class="fas fa-link"></i> Fuentes consultadas</h3>
+                    <ul>
+                        <li>
+                            <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes" target="_blank">
+                                Clases en JavaScript
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain" target="_blank">
+                                Herencia en JavaScript explicada
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://javascript.info/class-inheritance" target="_blank">
+                                Class inheritance
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECCIÓN 2: DEMOSTRACIÓN PRÁCTICA
+             ============================================ -->
+        <section class="section demo-section">
+            <h2><i class="fas fa-flask"></i> Demostración Práctica</h2>
+            
+            <div class="demo-container">
+                <div class="product-info">
+                    <h3>Producto a evaluar:</h3>
+                    <div class="product-specs">
+                        <p><strong>Clase:</strong> ProductoElectronico</p>
+                        <p><strong>Herencia:</strong> Extiende de Producto</p>
+                        <p><strong>Atributos:</strong> nombre, precio, stock, garantía, marca</p>
+                    </div>
+                </div>
+
+                <div class="button-container">
+                    <button id="mostrarProductoBtn" class="btn">
+                        <i class="fas fa-eye"></i> Mostrar Detalles del Producto
+                    </button>
+                </div>
+
+                <!-- Tarjeta para mostrar el detalle del producto -->
+                <div id="resultadoContainer" class="result-container">
+                    <h3><i class="fas fa-box-open"></i> Detalle del Producto:</h3>
+                    <div id="productoDetalle" class="product-card">
+                        <div class="empty-state">
+                          
+                            <p>Haz clic en el botón para ver los detalles del producto electrónico</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================
+             SECCIÓN 3: CÓDIGO FUENTE
+             ============================================ -->
+        <section class="section code-section">
+            <h2><i class="fas fa-code"></i> Código Implementado</h2>
+            
+            <div class="code-container">
+                <pre><code>// Clase Padre
+class Producto {
+    constructor(nombre, precio, stock) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.stock = stock;
+    }
+    
+    mostrarDetalle() {
+        return `Producto: ${this.nombre}, $${this.precio}`;
+    }
+}
+
+// Clase Hija con herencia
+class ProductoElectronico extends Producto {
+    constructor(nombre, precio, stock, garantia, marca) {
+        super(nombre, precio, stock);  // Llama al constructor padre
+        this.garantia = garantia;
+        this.marca = marca;
+    }
+    
+    // Sobrescritura de método
+    mostrarDetalle() {
+        return `${super.mostrarDetalle()}, Garantía: ${this.garantia} meses, Marca: ${this.marca}`;
+    }
+}</code></pre>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Actividad: Herencia en JavaScript | Clases, extends, override y super()</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="clases.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
