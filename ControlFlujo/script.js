@@ -52,7 +52,7 @@ function evaluarNumero(numero) {
         categoria = 'negativo';
     } else if (num <= 10) {
         resultado = `Número pequeño: ${num} (entre 0 y 10)`;
-        categoria = 'pequeno';
+        categoria = 'pequeño';
     } else if (num <= 50) {
         resultado = `Número mediano: ${num} (entre 11 y 50)`;
         categoria = 'mediano';
@@ -127,7 +127,7 @@ function actualizarListaHistorial() {
         let colorClass = '';
         switch(registro.categoria) {
             case 'negativo': colorClass = 'text-negativo'; break;
-            case 'pequeno': colorClass = 'text-pequeno'; break;
+            case 'pequeño': colorClass = 'text-pequeño'; break;
             case 'mediano': colorClass = 'text-mediano'; break;
             case 'grande': colorClass = 'text-grande'; break;
             case 'muy-alto': colorClass = 'text-muy-alto'; break;

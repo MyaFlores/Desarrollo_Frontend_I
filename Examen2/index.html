@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Catálogo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+            <h1>Netflix - Catálogo</h1>
+
+        <div class="button-container">
+            <button id="mostrarCatalogoBtn" class="btn-catalogo">
+                <i class="fas fa-film"></i> Mostrar catálogo
+            </button>
+        </div>
+
+        <div id="catalogo" class="catalogo-container">
+            <div class="empty-catalogo">
+                <i class="fas fa-tv"></i>
+                <p>Haz clic en "Mostrar catálogo" para ver las películas disponibles</p>
+            </div>
+        </div>
+
+        <!-- Información del catálogo -->
+        <div class="info-bar" id="infoBar">
+            <span><i class="fas fa-info-circle"></i> Películas en catálogo hasta el momento</span>
+            <span><i class="fas fa-heart" style="color: #ff4757;"></i> <span id="favoritosCount">0</span> favoritos</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

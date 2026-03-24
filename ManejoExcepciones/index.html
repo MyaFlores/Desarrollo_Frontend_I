@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora con manejo de excepciones</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Encabezado -->
+        <header class="header">
+            <h1><i class="fas fa-calculator"></i> Calculadoras</h1>
+            <p class="subtitle">Actividad 4.1. Funciones con try, catch y throw</p>
+        </header>
+
+        <!-- Sección de la calculadora -->
+        <section class="calculator-section">
+            <div class="calculator-card">
+                <h2><i class="fas fa-microchip"></i> Operación Matemática</h2>
+                
+                <!-- Campos de entrada -->
+                <div class="input-group">
+                    <div class="input-field">
+                        <label for="numero1">
+                            <i class="fas fa-number"></i> Primer número
+                        </label>
+                        <input type="text" id="numero1" class="input" placeholder="Ej: 10">
+                    </div>
+                    
+                    <div class="input-field">
+                        <label for="numero2">
+                            <i class="fas fa-number"></i> Segundo número
+                        </label>
+                        <input type="text" id="numero2" class="input" placeholder="Ej: 5">
+                    </div>
+                    
+                    <div class="input-field">
+                        <label for="operacion">
+                            <i class="fas fa-cog"></i> Operación
+                        </label>
+                        <select id="operacion" class="select">
+                            <option value="">-- Seleccione una operación --</option>
+                            <option value="suma">➕ Suma (+)</option>
+                            <option value="resta">➖ Resta (-)</option>
+                            <option value="multiplicacion">✖️ Multiplicación (×)</option>
+                            <option value="division">➗ División (÷)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Botón calcular -->
+                <button id="calcularBtn" class="btn-calcular">
+                    <i class="fas fa-play"></i> Calcular Operación
+                </button>
+                
+                <!-- Área de resultado -->
+                <div id="resultadoArea" class="result-area">
+                    <div class="result-placeholder">
+                        <i class="fas fa-chalkboard-user"></i>
+                        <p>Ingresa los datos y presiona "Calcular"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección del historial -->
+        <section class="history-section">
+            <div class="history-header">
+                <h2><i class="fas fa-history"></i> Historial de Operaciones</h2>
+                <button id="limpiarHistorialBtn" class="btn-clear">
+                    <i class="fas fa-trash-alt"></i> Limpiar historial
+                </button>
+            </div>
+            <div id="historialContainer" class="historial-container">
+                <div class="empty-history">
+                    <i class="fas fa-clock"></i>
+                    <p>No hay operaciones registradas</p>
+                    <small>Realiza una operación para ver el historial</small>
+                </div>
+                <ul id="historialList" class="historial-list"></ul>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Clase de manejo de excepciones - Mya Flores Castañón </p>
+        </footer>
+    </div>
+
+    <script src="errores.js"></script>
+</body>
+</html>
